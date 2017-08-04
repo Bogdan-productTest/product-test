@@ -1,4 +1,4 @@
-package Screenshots;
+package Assert;
 
 
 import org.openqa.selenium.WebDriver;
@@ -106,7 +106,6 @@ public class ProductTest {
     protected void createFolders(File file) {
         if (file.exists() == false) {
             file.mkdirs();
-            return;
         }
     }
 

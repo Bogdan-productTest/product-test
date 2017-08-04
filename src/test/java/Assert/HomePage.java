@@ -1,4 +1,4 @@
-package Screenshots;
+package Assert;
 
 import java.io.IOException;
 import org.testng.annotations.Test;

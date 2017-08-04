@@ -1,9 +1,7 @@
-package Screenshots;
+package Assert;
 
 
 
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
 

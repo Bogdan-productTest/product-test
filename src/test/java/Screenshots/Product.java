@@ -1,12 +1,11 @@
 
-package Test;
+package Screenshots;
 
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -29,12 +28,10 @@ import java.util.concurrent.TimeUnit;
     /**
      * Created by admin on 17.07.2017.
      */
-    public class Producttest {
+    public class Product {
 
         WebDriver driver;
         String browser;
-//        Screenshot actualScreenshot;
-//        Screenshot expectedScreenshot;
 
         String typePage;
         String date;

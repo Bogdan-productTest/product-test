@@ -1,11 +1,11 @@
-package Test;
+package Screenshots;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class AllScreenshots extends Producttest {
+public class AllScreenshots extends Product {
 
     //О проекте
     @Test
