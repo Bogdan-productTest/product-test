@@ -9,13 +9,8 @@ public class Result extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/result");
-
         driver.get("https://product-test.ru" + katalog );
+        assertTitle("Лучшие смартфоны 2017: обзоры, отзывы о телефонах, тесты | Product-test.ru ");
 
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

@@ -10,13 +10,8 @@ public class Contact extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/contact");
+        driver.get("https://product-test.ru" + "/pages" + typePage);
+        assertTitle("Контакты | Product-test.ru");
 
-        driver.get("https://product-test.ru" + "/pages" + "/contact");
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

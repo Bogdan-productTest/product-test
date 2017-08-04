@@ -9,14 +9,9 @@ public class Kupit extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/kupit");
+        driver.get("https://product-test.ru" + katalog + product + typePage);
+        assertTitle("Купить Xiaomi Redmi 4X 16Gb, цены Сяоми Редми 4Кс 16Гб | Product-test.ru");
 
-        driver.get("https://product-test.ru" + katalog + product + "/kupit");
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 
 

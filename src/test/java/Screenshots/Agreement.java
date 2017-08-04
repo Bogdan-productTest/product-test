@@ -11,13 +11,8 @@ public class Agreement extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/agreement");
+        driver.get("https://product-test.ru" + "/pages" + typePage);
+        assertTitle("Пользовательское соглашение | Product-test.ru");
 
-        driver.get("https://product-test.ru" + "/pages" + "/agreement");
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

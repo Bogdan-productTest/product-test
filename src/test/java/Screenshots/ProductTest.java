@@ -3,7 +3,11 @@ package Screenshots;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -33,6 +37,7 @@ public class ProductTest {
     String typePage;
 
     String katalog = "/smartfony";
+    String macroKatalog = "/electronics";
     String product = "/xiaomi-redmi-4x";
 
 
@@ -53,6 +58,18 @@ public class ProductTest {
             else if(browserName.equals("firefox")) {
                 driver = new FirefoxDriver();
                 browser = "/firefox";
+            }
+            else if(browserName.equals("opera")) {
+                driver = new OperaDriver();
+                browser = "/opera";
+            }
+            else if(browserName.equals("edge")) {
+                driver = new EdgeDriver();
+                browser = "/edge";
+            }
+            else if(browserName.equals("ie")) {
+                driver = new InternetExplorerDriver();
+                browser = "/ie";
             }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -81,7 +98,9 @@ public class ProductTest {
         this.browser = browser;
     }
 
-
+    protected void assertTitle (String title) {
+        Assert.assertEquals(driver.getTitle(),title);
+    }
 
 
     protected void createFolders(File file) {

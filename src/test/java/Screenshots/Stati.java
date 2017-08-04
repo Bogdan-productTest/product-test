@@ -10,13 +10,8 @@ public class Stati extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/stati");
-
         driver.get("https://product-test.ru" + "/pages" + "/stati");
+        assertTitle("Полезные статьи для потребителей | Product-test.ru");
 
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

@@ -2,6 +2,8 @@ package Screenshots;
 
 
 
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
@@ -11,15 +13,8 @@ public class About extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/about");
-
-        driver.get("https://product-test.ru" + "/pages" + "/about");
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
-
+        driver.get("https://product-test.ru" + "/pages" + typePage);
+        assertTitle("О Product-test.ru: что такое Продакт-тест?");
 
     }
 }

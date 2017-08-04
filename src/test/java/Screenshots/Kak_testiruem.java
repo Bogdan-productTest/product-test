@@ -9,13 +9,8 @@ public class Kak_testiruem extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/kak-testiruem");
+        driver.get("https://product-test.ru" + katalog + typePage );
+        assertTitle("Как мы тестируем смартфоны | Product-test.ru");
 
-        driver.get("https://product-test.ru" + katalog + "/kak-testiruem" );
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

@@ -9,13 +9,8 @@ public class Uslughitiestirovaniia extends ProductTest {
     public void main() throws IOException {
 
         setTypePage("/uslughitiestirovaniia");
+        driver.get("https://product-test.ru" + "/pages" + typePage);
+        assertTitle("Оценка и тестирование качества потребительских товаров, организация и проведение фокус групп | Product-test.ru");
 
-        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
-
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }

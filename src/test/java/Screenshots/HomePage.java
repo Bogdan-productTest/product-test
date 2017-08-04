@@ -13,13 +13,8 @@ import org.testng.annotations.Test;
     public void main() throws IOException {
 
         setTypePage("/homepage");
-
         driver.get("https://product-test.ru");
+        assertTitle("Product-test.ru - тесты, обзоры и отзывы о товарах от экспертов и потребителей");
 
-        createActualScreenshot();
-
-        setExpectedScreenshot();
-
-        createDiffFile();
     }
 }
