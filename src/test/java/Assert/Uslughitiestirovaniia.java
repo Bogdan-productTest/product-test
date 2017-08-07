@@ -6,8 +6,9 @@ import java.io.IOException;
 public class Uslughitiestirovaniia extends ProductTest {
 
     @Test
-    public void main() throws IOException {
+    protected void main() throws IOException {
 
+        //проверка title
         setTypePage("/uslughitiestirovaniia");
         driver.get("https://product-test.ru" + "/pages" + typePage);
         assertTitle("Оценка и тестирование качества потребительских товаров, организация и проведение фокус групп | Product-test.ru");

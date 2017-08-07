@@ -1,17 +1,25 @@
 package Assert;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class Macro_katalog extends ProductTest {
 
     @Test
-    public void main() throws IOException {
+    protected void main() throws IOException {
 
+        //проверка title
         setTypePage("/electronics/katalog");
         driver.get("https://product-test.ru" + typePage );
         assertTitle("Электроника | Product-test.ru");
+
+        //проверка ссылки "Все характеристики"
+        driver.findElement(By.linkText("Все характеристики")).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("kharakteristiki");
 
     }
 }

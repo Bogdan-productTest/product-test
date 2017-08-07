@@ -121,12 +121,12 @@ import java.util.concurrent.TimeUnit;
 
         protected void createActualScreenshot () throws IOException {
             Screenshot actualScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
-            File fileActual = new File( "C:/Product_test/Screenshots/" + typePage + "/" + browser + "/actual" + "/" + date + ".png");
+            File fileActual = new File( "C:/Product_test/Screenshots/Release/" + typePage + "/" + browser + "/actual" + "/" + date + ".png");
             if (fileActual.exists() == false)
                 fileActual.mkdirs();
             ImageIO.write(actualScreenshot.getImage(), "png", fileActual);
 
-            File fileExpected = new File ("C:/Product_test/Screenshots/" + typePage + "/" + browser + "/expected/" + "expectedScreenshot.png");
+            File fileExpected = new File ("C:/Product_test/Screenshots/Release/" + typePage + "/" + browser + "/expected/" + "expectedScreenshot.png");
             if (fileExpected.exists() == false) {
                 fileExpected.mkdirs();
                 ImageIO.write(actualScreenshot.getImage(), "png", fileExpected);
@@ -136,7 +136,7 @@ import java.util.concurrent.TimeUnit;
             ImageDiff diff = new ImageDiffer().makeDiff(
                     expectedScreenshot, actualScreenshot);
 
-            File diffFile = new File("C:/Product_test/Screenshots" + "/diff/" + date + "_" + typePage + "_" + browser + ".png");
+            File diffFile = new File("C:/Product_test/Screenshots/Release" + "/diff/" + date + "_" + typePage + "_" + browser + ".png");
             if (diffFile.exists() == false)
                 diffFile.mkdirs();
             ImageIO.write(diff.getMarkedImage(), "png", diffFile);

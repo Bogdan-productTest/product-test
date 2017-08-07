@@ -29,59 +29,24 @@ import java.util.concurrent.TimeUnit;
  */
 public class ProductTest {
 
-    WebDriver driver;
-    String browser;
-    Screenshot actualScreenshot;
-    Screenshot expectedScreenshot;
+   protected  WebDriver driver;
+   protected   String typePage;
 
-    String typePage;
-
-    String katalog = "/smartfony";
-    String macroKatalog = "/electronics";
-    String product = "/xiaomi-redmi-4x";
+   protected   String katalog = "/smartfony";
+   protected String product = "/xiaomi-redmi-4x";
 
 
-    String screenshotActual = "/actual";
-    String screenshotExpected = "/expected";
-    String screenshotDiff = "/diff";
-    String screenshotGif = "/gif";
+    @BeforeClass
+    protected void before () {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
 
-
-
-        @BeforeClass
-        @Parameters("browser")
-        protected WebDriver getDriver( String browserName) {
-            if(browserName.equals("chrome")) {
-                driver = new ChromeDriver();
-                browser = "/chrome";
-            }
-            else if(browserName.equals("firefox")) {
-                driver = new FirefoxDriver();
-                browser = "/firefox";
-            }
-            else if(browserName.equals("opera")) {
-                driver = new OperaDriver();
-                browser = "/opera";
-            }
-            else if(browserName.equals("edge")) {
-                driver = new EdgeDriver();
-                browser = "/edge";
-            }
-            else if(browserName.equals("ie")) {
-                driver = new InternetExplorerDriver();
-                browser = "/ie";
-            }
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            setBrowser(browser);
-            return driver;
-        }
-
-        @AfterClass
-        protected void tearDown() {
+    @AfterClass
+    protected void tearDown() {
             if(driver != null)
                 driver.quit();
-        }
+    }
 
 
 
@@ -90,69 +55,14 @@ public class ProductTest {
         this.typePage = typePage;
     }
 
-    protected void setDriver(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    protected void setBrowser(String browser) {
-        this.browser = browser;
-    }
-
     protected void assertTitle (String title) {
         Assert.assertEquals(driver.getTitle(),title);
     }
 
-
-    protected void createFolders(File file) {
-        if (file.exists() == false) {
-            file.mkdirs();
-        }
+    protected void assertLink (String s){
+        String st = driver.getCurrentUrl();
+        Assert.assertEquals(driver.getCurrentUrl().substring(st.length() - s.length()),s);
     }
-
-
-    protected String setDir (String pageName, String browser, String typeScreenshoot){
-        File file = new File("C:/Product_test/Screenshots" + pageName + browser + typeScreenshoot);
-        String pathToString = file.getAbsolutePath();
-        createFolders(file);
-        return pathToString;
-    }
-
-    protected String getDate () {
-        Locale local = new Locale("ru","RU");
-        DateFormat df = DateFormat.getDateInstance(DateFormat.DEFAULT, local);
-        Date currentDate = new Date();
-        return df.format(currentDate);
-    }
-
-
-    protected void createActualScreenshot () throws IOException {
-        actualScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
-        File filename = new File( setDir(typePage, browser, screenshotActual) + "/" + getDate() + ".png");
-        ImageIO.write(actualScreenshot.getImage(), "png", filename);
-    }
-
-    protected void setExpectedScreenshot () throws IOException {
-        File fileExpected = new File (setDir(typePage, browser, screenshotExpected)+ "/expectedScreenshot.png");
-        if (fileExpected.exists() == false) {
-            fileExpected.mkdirs();
-            ImageIO.write(actualScreenshot.getImage(), "png", fileExpected);
-        }
-        expectedScreenshot = new Screenshot(ImageIO.read(fileExpected));
-    }
-
-    protected void createDiffFile () throws IOException {
-        ImageDiff diff = new ImageDiffer().makeDiff(
-                expectedScreenshot, actualScreenshot);
-
-        File diffFile = new File(setDir(typePage, browser, screenshotDiff)+ "/" + getDate() + ".png");
-        ImageIO.write(diff.getMarkedImage(), "png", diffFile);
-    }
-
-// protected void createGif () {
-//        File[] filesArray = {expectedScreenshot, actualScreenshot, diffFile};
-//        gifFile = GifSequenceWriter.createGIF(filesArray, resultGifs+name);
-//    }
-
 }
 
 

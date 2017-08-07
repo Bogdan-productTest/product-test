@@ -1,16 +1,30 @@
 package Assert;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class Kharakteristiki extends ProductTest {
 
     @Test
-    public void main() throws IOException {
+    protected void main() throws IOException {
 
+        //проверка title
         setTypePage("/kharakteristiki");
         driver.get("https://product-test.ru" + katalog + product + typePage);
-        assertTitle("Xiaomi Redmi 4X - обзор, отзывы о Сяоми Редми 4X | Product-test.ru");
+        assertTitle("Характеристики Xiaomi Redmi 4X 32Gb (Сяоми Редми 4Кс 32Гб) | Product-test.ru");
+
+        //проверка ссылки тизера
+        driver.findElements(By.className("fresh__link")).get(0).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("kupit");
+        driver.navigate().back();
+
+        //проверка оценка product-test
+        driver.findElement(By.linkText("Оценка Product-test:")).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("obzor");
 
     }
 }
