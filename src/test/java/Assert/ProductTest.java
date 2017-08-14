@@ -1,6 +1,5 @@
 package Assert;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -36,13 +35,13 @@ public class ProductTest {
    protected String product = "/xiaomi-redmi-4x";
 
 
-    @BeforeClass
+    @BeforeSuite
     protected void before () {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterClass
+    @AfterSuite
     protected void tearDown() {
             if(driver != null)
                 driver.quit();

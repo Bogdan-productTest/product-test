@@ -5,31 +5,31 @@
     <test name="ChromeTest">
     <parameter name="browser" value="chrome"/>
     <packages>
-        <package name="Assert.*"/>
+        <package name="Screenshots.*"/>
     </packages>
 </test>
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox"/>
         <packages>
-            <package name="Assert.*"/>
+            <package name="Screenshots.*"/>
         </packages>
     </test>
     <test name="OperaTest">
         <parameter name="browser" value="opera"/>
         <packages>
-            <package name="Assert.*"/>
+            <package name="Screenshots.*"/>
         </packages>
     </test>
     <test name="EdgeTest">
         <parameter name="browser" value="edge"/>
         <packages>
-            <package name="Assert.*"/>
+            <package name="Screenshots.*"/>
         </packages>
     </test>
     <test name="IETest">
         <parameter name="browser" value="ie"/>
         <packages>
-            <package name="Assert.*"/>
+            <package name="Screenshots.*"/>
         </packages>
     </test>
 

@@ -7,21 +7,21 @@ import java.io.IOException;
 
 public class AllScreenshots extends Product {
 
+    String url = "https://product-test.ru";
+
     //О проекте
     @Test
     public void aboutScreenshot () throws IOException {
         setTypePage("about");
-        driver.get("https://product-test.ru" + "/pages" + "/about");
+        driver.get(url + "/pages" + "/about");
         createActualScreenshot();
-        System.out.println(driver.getTitle());
-        Assert.assertEquals(driver.getTitle(), "О Product-test.ru: что такое Продакт-тест?");
     }
 
     //Пользовательское соглашение
     @Test
     public void agreementScreenshot () throws IOException {
         setTypePage("agreement");
-        driver.get("https://product-test.ru" + "/pages" + "/agreement");
+        driver.get(url + "/pages" + "/agreement");
         createActualScreenshot();
     }
 
@@ -29,7 +29,7 @@ public class AllScreenshots extends Product {
     @Test
     public void contactScreenshot () throws IOException {
         setTypePage("contact");
-        driver.get("https://product-test.ru" + "/pages" + "/contact");
+        driver.get(url + "/pages" + "/contact");
         createActualScreenshot();
     }
 
@@ -37,7 +37,7 @@ public class AllScreenshots extends Product {
     @Test
     public void helperScreenshot () throws IOException {
         setTypePage("helper");
-        driver.get("https://product-test.ru" + "/mikrovolnovye-pechi" + "/helper");
+        driver.get(url + "/mikrovolnovye-pechi" + "/helper");
         createActualScreenshot();
     }
 
@@ -45,7 +45,7 @@ public class AllScreenshots extends Product {
     @Test
     public void homeScreenshot () throws IOException {
         setTypePage("homepage");
-        driver.get("https://product-test.ru");
+        driver.get(url);
         createActualScreenshot();
     }
 
@@ -53,7 +53,7 @@ public class AllScreenshots extends Product {
     @Test
     public void kak_testiruemScreenshot () throws IOException {
         setTypePage("kak_testiruem");
-        driver.get("https://product-test.ru" + katalog + "/kak-testiruem" );
+        driver.get(url + katalog + "/kak-testiruem" );
         createActualScreenshot();
     }
 
@@ -61,7 +61,7 @@ public class AllScreenshots extends Product {
     @Test
     public void kharakteristikiScreenshot () throws IOException {
         setTypePage("kharakteristiki");
-        driver.get("https://product-test.ru" + katalog + product + "/kharakteristiki");
+        driver.get(url + katalog + product + "/kharakteristiki");
         createActualScreenshot();
     }
 
@@ -69,7 +69,7 @@ public class AllScreenshots extends Product {
     @Test
     public void kupitScreenshot () throws IOException {
         setTypePage("kupit");
-        driver.get("https://product-test.ru" + katalog + product + "/kupit");
+        driver.get(url + katalog + product + "/kupit");
         createActualScreenshot();
     }
 
@@ -77,7 +77,7 @@ public class AllScreenshots extends Product {
     @Test
     public void news_allScreenshot () throws IOException {
         setTypePage("news_all");
-        driver.get("https://product-test.ru" + "/news");
+        driver.get(url + "/news");
         createActualScreenshot();
     }
 
@@ -85,7 +85,7 @@ public class AllScreenshots extends Product {
     @Test
     public void obzorScreenshot () throws IOException {
         setTypePage("obzor");
-        driver.get("https://product-test.ru" + "/proghulochnyiekoliaski/pegperegogt3nakedcompleto" + "/obzor");
+        driver.get(url + "/proghulochnyiekoliaski/pegperegogt3nakedcompleto" + "/obzor");
         createActualScreenshot();
     }
 
@@ -93,7 +93,7 @@ public class AllScreenshots extends Product {
     @Test
     public void resultScreenshot () throws IOException {
         setTypePage("result");
-        driver.get("https://product-test.ru" + katalog );
+        driver.get(url + katalog );
         createActualScreenshot();
     }
 
@@ -101,7 +101,7 @@ public class AllScreenshots extends Product {
     @Test
     public void statiScreenshot () throws IOException {
         setTypePage("stati");
-        driver.get("https://product-test.ru" + "/pages" + "/stati");
+        driver.get(url + "/pages" + "/stati");
         createActualScreenshot();
     }
 
@@ -109,7 +109,7 @@ public class AllScreenshots extends Product {
     @Test
     public void uslugitestirovaniiaScreenshot () throws IOException {
         setTypePage("uslughitiestirovaniia");
-        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
+        driver.get(url + "/pages" + "/uslughitiestirovaniia");
         createActualScreenshot();
     }
 
@@ -117,7 +117,7 @@ public class AllScreenshots extends Product {
     @Test
     public void katalogScreenshot () throws IOException {
         setTypePage("katalog");
-        driver.get("https://product-test.ru" + katalog + "/katalog");
+        driver.get(url + katalog + "/katalog");
         createActualScreenshot();
     }
 
@@ -125,7 +125,7 @@ public class AllScreenshots extends Product {
     @Test
     public void macro_katalogScreenshot () throws IOException {
         setTypePage("macro_katalog");
-        driver.get("https://product-test.ru" + macroKatalog + "/katalog");
+        driver.get(url + macroKatalog + "/katalog");
         createActualScreenshot();
     }
 
@@ -133,7 +133,7 @@ public class AllScreenshots extends Product {
     @Test
     public void search_resultScreenshot () throws IOException {
         setTypePage("search_result");
-        driver.get("https://product-test.ru" + "/search?Search=#gsc.tab=0&gsc.q=%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%BE%D0%B2&gsc.sort=");
+        driver.get(url + "/search?Search=#gsc.tab=0&gsc.q=%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3%20%D1%81%D0%BC%D0%B0%D1%80%D1%82%D1%84%D0%BE%D0%BD%D0%BE%D0%B2&gsc.sort=");
         createActualScreenshot();
     }
 
@@ -141,7 +141,7 @@ public class AllScreenshots extends Product {
     @Test
     public void not_foundScreenshot () throws IOException {
         setTypePage("not_found");
-        driver.get("https://product-test.ru" + "/fdgdf");
+        driver.get(url + "/fdgdf");
         createActualScreenshot();
     }
 
@@ -149,7 +149,7 @@ public class AllScreenshots extends Product {
     @Test
     public void testsScreenshot () throws IOException {
         setTypePage("tests");
-        driver.get("https://product-test.ru" + "/tests");
+        driver.get(url + "/tests");
         createActualScreenshot();
     }
 
@@ -157,7 +157,7 @@ public class AllScreenshots extends Product {
     @Test
     public void ratingScreenshot () throws IOException {
         setTypePage("rating");
-        driver.get("https://product-test.ru" + katalog + "/rating");
+        driver.get(url + katalog + "/rating");
         createActualScreenshot();
     }
 
@@ -165,7 +165,7 @@ public class AllScreenshots extends Product {
     @Test
     public void robotsScreenshot () throws IOException {
         setTypePage("robots");
-        driver.get("https://product-test.ru" + "/robots.txt");
+        driver.get(url + "/robots.txt");
         createActualScreenshot();
     }
 
@@ -173,7 +173,7 @@ public class AllScreenshots extends Product {
     @Test
     public void sitemapScreenshot () throws IOException {
         setTypePage("sitemap");
-        driver.get("https://product-test.ru" + "/sitemap.xml");
+        driver.get(url + "/sitemap.xml");
         createActualScreenshot();
     }
 
@@ -181,41 +181,10 @@ public class AllScreenshots extends Product {
     @Test
     public void newsScreenshot () throws IOException {
         setTypePage("news");
-        driver.get("https://product-test.ru" + "/news/kids/2017-8-luchshix-letnix-kolyasok-po-rezultatam-testov");
+        driver.get(url + "/news/kids/2017-8-luchshix-letnix-kolyasok-po-rezultatam-testov");
         createActualScreenshot();
     }
-//    @Test
-//    public void form_loginScreenshot () throws IOException {
-//        setTypePage("uslughitiestirovaniia");
-//        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
-//        createActualScreenshot();
-//        setExpectedScreenshot();
-//        createDiffFile();
-//    }
-//    @Test
-//    public void form_registrationScreenshot () throws IOException {
-//        setTypePage("uslughitiestirovaniia");
-//        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
-//        createActualScreenshot();
-//        setExpectedScreenshot();
-//        createDiffFile();
-//    }
-//    @Test
-//    public void form_pass_recoveryScreenshot () throws IOException {
-//        setTypePage("uslughitiestirovaniia");
-//        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
-//        createActualScreenshot();
-//        setExpectedScreenshot();
-//        createDiffFile();
-//    }
-//    @Test
-//    public void form_accountScreenshot () throws IOException {
-//        setTypePage("uslughitiestirovaniia");
-//        driver.get("https://product-test.ru" + "/pages" + "/uslughitiestirovaniia");
-//        createActualScreenshot();
-//        setExpectedScreenshot();
-//        createDiffFile();
-//    }
+
 
 
 

@@ -39,6 +39,7 @@ import java.util.concurrent.TimeUnit;
         String katalog = "/smartfony";
         String macroKatalog = "/electronics";
         String product = "/xiaomi-redmi-4x";
+        String path = "C:/Product_test/Screenshots/Release/";
 
         @BeforeClass
         @Parameters("browser")
@@ -96,11 +97,13 @@ import java.util.concurrent.TimeUnit;
 
 
 
-        protected void createFolders(File file) {
+        protected boolean createFolders(File file) {
+            boolean i = false;
             if (file.exists() == false) {
                 file.mkdirs();
-                return;
+                i = true;
             }
+            return i;
         }
 
 
@@ -120,25 +123,26 @@ import java.util.concurrent.TimeUnit;
 
 
         protected void createActualScreenshot () throws IOException {
+
+            //актуальный скриншот
             Screenshot actualScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
-            File fileActual = new File( "C:/Product_test/Screenshots/Release/" + typePage + "/" + browser + "/actual" + "/" + date + ".png");
-            if (fileActual.exists() == false)
-                fileActual.mkdirs();
+            File fileActual = new File( path + "actual/" + date + "_" + typePage + "_" + browser +  ".png");
+            createFolders(fileActual);
             ImageIO.write(actualScreenshot.getImage(), "png", fileActual);
 
-            File fileExpected = new File ("C:/Product_test/Screenshots/Release/" + typePage + "/" + browser + "/expected/" + "expectedScreenshot.png");
-            if (fileExpected.exists() == false) {
-                fileExpected.mkdirs();
+            //эталонный скриншот
+            File fileExpected = new File (path + "expected/" + typePage + "_" + browser  + ".png");
+            if (createFolders(fileExpected) == true ) {
                 ImageIO.write(actualScreenshot.getImage(), "png", fileExpected);
             }
             Screenshot expectedScreenshot = new Screenshot(ImageIO.read(fileExpected));
 
+            //маркированный скриншот
             ImageDiff diff = new ImageDiffer().makeDiff(
                     expectedScreenshot, actualScreenshot);
 
-            File diffFile = new File("C:/Product_test/Screenshots/Release" + "/diff/" + date + "_" + typePage + "_" + browser + ".png");
-            if (diffFile.exists() == false)
-                diffFile.mkdirs();
+            File diffFile = new File(path + "diff/" + date + "_" + typePage + "_" + browser + ".png");
+            createFolders(diffFile);
             ImageIO.write(diff.getMarkedImage(), "png", diffFile);
 
 
