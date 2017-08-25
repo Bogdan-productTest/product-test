@@ -13,7 +13,7 @@ public class News_all extends ProductTest {
     protected void main() throws IOException {
 
         setTypePage("/news_all");
-        driver.get("https://product-test.ru" + "/news");
+        driver.get(url + "/news");
         assertTitle("Новости | Product-test.ru");
 
         //провека ссылок тизеров

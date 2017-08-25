@@ -11,7 +11,7 @@ public class Contact extends ProductTest {
 
         //проверка title
         setTypePage("/contact");
-        driver.get("https://product-test.ru" + "/pages" + typePage);
+        driver.get(url + "/pages" + typePage);
         assertTitle("Контакты | Product-test.ru");
 
     }

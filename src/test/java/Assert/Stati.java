@@ -11,7 +11,7 @@ public class Stati extends ProductTest {
 
         //проверка title
         setTypePage("/stati");
-        driver.get("https://product-test.ru" + "/pages" + "/stati");
+        driver.get(url + "/pages" + "/stati");
         assertTitle("Полезные статьи для потребителей | Product-test.ru");
 
     }

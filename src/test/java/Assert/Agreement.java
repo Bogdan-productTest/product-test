@@ -12,7 +12,7 @@ public class Agreement extends ProductTest {
 
         //провека title
         setTypePage("/agreement");
-        driver.get("https://product-test.ru" + "/pages" + typePage);
+        driver.get(url + "/pages" + typePage);
         assertTitle("Пользовательское соглашение | Product-test.ru");
 
     }

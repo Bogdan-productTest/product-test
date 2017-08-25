@@ -13,7 +13,7 @@ public class Rating extends ProductTest{
 
         //проверка title
         setTypePage("/rating");
-        driver.get("https://product-test.ru" + katalog + typePage);
+        driver.get(url + katalog + typePage);
         assertTitle("Рейтинг смартфонов и телефонов 2017: цены, модели, топ-телефоны | Product-test.ru");
 
         //проверка ссылок товаров

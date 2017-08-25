@@ -12,7 +12,7 @@ public class Kharakteristiki extends ProductTest {
 
         //проверка title
         setTypePage("/kharakteristiki");
-        driver.get("https://product-test.ru" + katalog + product + typePage);
+        driver.get(url + katalog + product + typePage);
         assertTitle("Характеристики Xiaomi Redmi 4X 32Gb (Сяоми Редми 4Кс 32Гб) | Product-test.ru");
 
         //проверка ссылки тизера
@@ -20,11 +20,6 @@ public class Kharakteristiki extends ProductTest {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("kupit");
         driver.navigate().back();
-
-        //проверка оценка product-test
-        driver.findElement(By.linkText("Оценка Product-test:")).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        assertLink("obzor");
 
     }
 }

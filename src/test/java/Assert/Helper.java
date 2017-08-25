@@ -13,7 +13,7 @@ public class Helper extends ProductTest {
 
         //проверка title
         setTypePage("/helper");
-        driver.get("https://product-test.ru" + katalog + typePage);
+        driver.get(url + katalog + typePage);
         assertTitle("Какой телефон лучше купить в 2017 году, как выбрать смартфон | Product-test.ru");
 
         //проверка ссылки тизера

@@ -10,7 +10,7 @@ public class Uslughitiestirovaniia extends ProductTest {
 
         //проверка title
         setTypePage("/uslughitiestirovaniia");
-        driver.get("https://product-test.ru" + "/pages" + typePage);
+        driver.get(url + "/pages" + typePage);
         assertTitle("Оценка и тестирование качества потребительских товаров, организация и проведение фокус групп | Product-test.ru");
 
     }

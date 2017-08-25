@@ -27,21 +27,22 @@ import java.util.concurrent.TimeUnit;
  * Created by admin on 17.07.2017.
  */
 public class ProductTest {
+    protected String url = "https://staging.product-test.ru";
 
-   protected  WebDriver driver;
-   protected   String typePage;
+   protected   WebDriver driver;
+   protected  String typePage;
 
-   protected   String katalog = "/smartfony";
+   protected String katalog = "/smartfony";
    protected String product = "/xiaomi-redmi-4x";
 
 
-    @BeforeSuite
+    @BeforeClass
     protected void before () {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterSuite
+    @AfterClass
     protected void tearDown() {
             if(driver != null)
                 driver.quit();

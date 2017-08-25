@@ -12,7 +12,7 @@ public class Result extends ProductTest {
 
         //проверка title
         setTypePage("/result");
-        driver.get("https://product-test.ru" + katalog );
+        driver.get(url + katalog );
         assertTitle("Лучшие смартфоны 2017: обзоры, отзывы о телефонах, тесты | Product-test.ru");
 
         //проверка ссылки тизера

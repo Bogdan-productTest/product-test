@@ -12,7 +12,7 @@ public class Kupit extends ProductTest {
 
         //проверка title
         setTypePage("/kupit");
-        driver.get("https://product-test.ru" + katalog + product + typePage);
+        driver.get(url + katalog + product + typePage);
         assertTitle("Купить Xiaomi Redmi 4X 16Gb, цены Сяоми Редми 4Кс 16Гб | Product-test.ru");
 
         //проверка ссылки тизера

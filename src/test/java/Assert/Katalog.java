@@ -13,7 +13,7 @@ public class Katalog extends ProductTest {
 
         //проверка title
         setTypePage("/katalog");
-        driver.get("https://product-test.ru" + katalog + typePage );
+        driver.get(url + katalog + typePage );
         assertTitle("Купить смартфон недорого: цены, характеристики и каталог смартфонов | Product-test.ru");
 
         //проверка ссылок товаров

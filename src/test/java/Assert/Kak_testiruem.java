@@ -12,7 +12,7 @@ public class Kak_testiruem extends ProductTest {
 
         //проверка title
         setTypePage("/kak-testiruem");
-        driver.get("https://product-test.ru" + katalog + typePage );
+        driver.get(url + katalog + typePage );
         assertTitle("Как мы тестируем смартфоны | Product-test.ru");
 
         //проверка ссылки тизера

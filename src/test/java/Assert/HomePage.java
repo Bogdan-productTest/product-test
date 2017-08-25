@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
         //проверка title
         setTypePage("/homepage");
-        driver.get("https://product-test.ru");
+        driver.get(url);
         assertTitle("Product-test.ru - тесты, обзоры и отзывы о товарах от экспертов и потребителей");
 
 //        driver.findElements(By.className("blockGoods-row-pic")).get(0).click();

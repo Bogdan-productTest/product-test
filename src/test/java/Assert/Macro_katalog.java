@@ -13,7 +13,7 @@ public class Macro_katalog extends ProductTest {
 
         //проверка title
         setTypePage("/electronics/katalog");
-        driver.get("https://product-test.ru" + typePage );
+        driver.get(url + typePage );
         assertTitle("Электроника | Product-test.ru");
 
         //проверка ссылки "Все характеристики"

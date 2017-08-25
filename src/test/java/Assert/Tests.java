@@ -14,7 +14,7 @@ public class Tests extends ProductTest {
 
         //проверка title
         setTypePage("/tests");
-        driver.get("https://product-test.ru" + typePage);
+        driver.get(url + typePage);
         assertTitle("Обзоры и тесты товаров | Product-test.ru");
 
         //проверка ссылки тизера

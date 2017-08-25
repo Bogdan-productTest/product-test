@@ -12,7 +12,7 @@ public class Obzor extends ProductTest {
 
         //проверка title
         setTypePage("/obzor");
-        driver.get("https://product-test.ru" + katalog + product + typePage);
+        driver.get(url + katalog + product + typePage);
         assertTitle("Xiaomi Redmi 4X - обзор, отзывы о Сяоми Редми 4X | Product-test.ru");
 
         //проверка ссылки тизера
