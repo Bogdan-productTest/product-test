@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
  * Created by admin on 17.07.2017.
  */
 public class ProductTest {
-    protected String url = "https://staging.product-test.ru";
+    protected String url = "https://product-test.ru";
 
    protected   WebDriver driver;
    protected  String typePage;
