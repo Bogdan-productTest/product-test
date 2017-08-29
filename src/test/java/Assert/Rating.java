@@ -32,10 +32,6 @@ public class Rating extends ProductTest{
         assertLink("kupit");
         driver.navigate().back();
 
-        //проверка ссылки тизера
-        driver.findElements(By.className("fresh__link")).get(0).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        assertLink("obzor");
 
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
@@ -65,5 +61,10 @@ public class Rating extends ProductTest{
                 continue;
             }
         }
+
+        //проверка ссылки тизера
+        driver.findElements(By.className("fresh__link")).get(0).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("obzor");
     }
 }

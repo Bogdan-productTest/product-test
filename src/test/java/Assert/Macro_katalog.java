@@ -19,11 +19,6 @@ public class Macro_katalog extends ProductTest {
         driver.get(url + typePage );
         assertTitle("Электроника | Product-test.ru");
 
-        //проверка ссылки "Все характеристики"
-        driver.findElement(By.linkText("Все характеристики")).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        assertLink("kharakteristiki");
-
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
         System.out.println(listOG);
@@ -44,6 +39,11 @@ public class Macro_katalog extends ProductTest {
                 continue;
             }
         }
+
+        //проверка ссылки "Все характеристики"
+        driver.findElement(By.linkText("Все характеристики")).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("kharakteristiki");
 
     }
 }

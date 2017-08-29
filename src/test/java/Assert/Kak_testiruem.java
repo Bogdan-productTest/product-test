@@ -18,11 +18,6 @@ public class Kak_testiruem extends ProductTest {
         driver.get(url + katalog + typePage );
         assertTitle("Как мы тестируем смартфоны | Product-test.ru");
 
-        //проверка ссылки тизера
-        driver.findElements(By.className("fresh__link")).get(0).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        assertLink("obzor");
-
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
         System.out.println(listOG);
@@ -39,7 +34,7 @@ public class Kak_testiruem extends ProductTest {
                 } else if (property.equals("og:type")) {
                     Assert.assertEquals(assertOG.getAttribute("content"),"website");
                 } else if (property.equals("og:image")) {
-                    Assert.assertEquals(assertOG.getAttribute("content"),"https://ptfiles.blob.core.windows.net/files/d6a7a10e-7f36-4a32-9505-35f5f7e44d14_600.jpg");
+                    Assert.assertEquals(assertOG.getAttribute("content"),"https://ptfiles.blob.core.windows.net/files/8efb71e1-1140-4463-aa83-7022bf1b4d6e_600.jpg");
                 } else if (property.equals("og:description")) {
                     Assert.assertEquals(assertOG.getAttribute("content"),"Узнайте о методике тестов смартфонов экспертами Product-test.ru: какие параметры самые важные и как их измеряют.");
                 } else if (name.equals("description")) {
@@ -51,5 +46,11 @@ public class Kak_testiruem extends ProductTest {
                 continue;
             }
         }
+
+        //проверка ссылки тизера
+        driver.findElements(By.className("fresh__link")).get(0).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("obzor");
+
     }
 }

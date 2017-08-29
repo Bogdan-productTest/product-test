@@ -18,11 +18,6 @@ public class Result extends ProductTest {
         driver.get(url + katalog );
         assertTitle("Лучшие смартфоны 2017: обзоры, отзывы о телефонах, тесты | Product-test.ru");
 
-        //проверка ссылки тизера
-        driver.findElements(By.className("fresh__link")).get(0).click();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        assertLink("obzor");
-
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
         System.out.println(listOG);
@@ -51,5 +46,10 @@ public class Result extends ProductTest {
                 continue;
             }
         }
+
+        //проверка ссылки тизера
+        driver.findElements(By.className("fresh__link")).get(0).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        assertLink("obzor");
     }
 }
