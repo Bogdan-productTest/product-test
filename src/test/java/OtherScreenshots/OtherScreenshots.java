@@ -22,11 +22,11 @@ import java.util.concurrent.TimeUnit;
 
 public class OtherScreenshots {
     WebDriver driver;
-    String url = "https://staging.product-test.ru";
+    String url = "https://product-test.ru";
 
     private void createActualScreenshot (String name, String type) throws IOException {
         Screenshot actualScreenshot1 = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
-        File filename = new File( "C:/Users/Тестер/Desktop/screenshotsStaging2508/" + type + name + ".png");
+        File filename = new File( "C:/Users/Тестер/Desktop/screenshots1509/" + type + name + ".png");
         System.out.println(filename.exists());
         if (filename.exists() == false) {
             filename.mkdirs();
@@ -36,7 +36,7 @@ public class OtherScreenshots {
 
     private void createScreenshotElement (WebElement element, String name) throws IOException {
         Screenshot screenshot2 = new AShot().takeScreenshot(driver, element);
-        File filename = new File( "C:/Users/Тестер/Desktop/screenshotsStaging2508/" + name + ".png");
+        File filename = new File( "C:/Users/Тестер/Desktop/screenshots1509/" + name + ".png");
         System.out.println(filename.exists());
         if (filename.exists() == false) {
             filename.mkdirs();

@@ -40,10 +40,11 @@ public class Macro_katalog extends ProductTest {
             }
         }
 
+
+
         //проверка ссылки "Все характеристики"
         driver.findElement(By.linkText("Все характеристики")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("kharakteristiki");
-
     }
 }

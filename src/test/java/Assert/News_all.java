@@ -62,7 +62,8 @@ public class News_all extends ProductTest {
         driver.findElement(By.cssSelector(".post__more")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("tests");
+
+
+
     }
-
-
 }

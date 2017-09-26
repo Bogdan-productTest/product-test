@@ -51,5 +51,8 @@ public class Obzor extends ProductTest {
         driver.findElements(By.className("fresh__link")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
+
+
     }
 }
+

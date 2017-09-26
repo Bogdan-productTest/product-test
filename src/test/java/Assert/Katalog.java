@@ -19,7 +19,6 @@ public class Katalog extends ProductTest {
         driver.get(url + katalog + typePage );
         assertTitle("Купить смартфон недорого: цены, характеристики и каталог смартфонов | Product-test.ru");
 
-
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
         System.out.println(listOG);
@@ -36,7 +35,7 @@ public class Katalog extends ProductTest {
                 } else if (property.equals("og:type")) {
                     Assert.assertEquals(assertOG.getAttribute("content"),"website");
                 } else if (property.equals("og:image")) {
-                    Assert.assertEquals(assertOG.getAttribute("content"),"https://ptfiles.blob.core.windows.net/files/8efb71e1-1140-4463-aa83-7022bf1b4d6e_600.jpg");
+                    Assert.assertEquals(assertOG.getAttribute("content"),"https://ptfiles.blob.core.windows.net/files/d6a7a10e-7f36-4a32-9505-35f5f7e44d14_600.jpg");
                 } else if (property.equals("og:description")) {
                     Assert.assertEquals(assertOG.getAttribute("content"),"Здесь можно выбрать и купить смартфон по параметрам, отзывам и цене. Большой выбор моделей от проверенных магазинов.");
                 } else if (name.equals("description")) {
@@ -49,28 +48,31 @@ public class Katalog extends ProductTest {
             }
         }
 
+
         //проверка ссылок товаров
-        //по иконке
+            //по иконке
         driver.findElements(By.className("prod__preview")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("kupit");
         driver.navigate().back();
 
-        //по названию
+            //по названию
         driver.findElements(By.className("prod__title-link")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("kupit");
         driver.navigate().back();
 
-        //по цене
+            //по цене
         driver.findElements(By.className("prod__price-value")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("kupit");
         driver.navigate().back();
 
-        //оценка product-test
+            //оценка product-test
         driver.findElement(By.linkText("Оценка Product-test:")).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
+
+
     }
 }

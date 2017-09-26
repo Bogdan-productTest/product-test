@@ -4,10 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.yandex.qatools.ashot.AShot;
@@ -40,10 +38,7 @@ public class ProductTest {
 
     @BeforeClass
     protected void before () {
-        System.setProperty("webdriver.gecko.driver","/home/luke/product-test/geckodriver-v0.18.0-linux64/geckodriver");
-        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-        capabilities.setCapability("marionette", true);
-        driver = new FirefoxDriver(capabilities);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 

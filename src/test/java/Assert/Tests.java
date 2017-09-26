@@ -48,14 +48,15 @@ public class Tests extends ProductTest {
             }
         }
 
+
         //проверка ссылки тизера
-        //по названию
+            //по названию
         driver.findElements(By.className("post__title")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
         driver.navigate().back();
 
-        //по иконке
+            //по иконке
         driver.findElements(By.className("post__pic")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
@@ -72,5 +73,6 @@ public class Tests extends ProductTest {
         driver.findElements(By.className("link-arrow")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("news");
+
     }
 }

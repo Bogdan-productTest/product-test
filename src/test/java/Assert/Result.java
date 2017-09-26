@@ -47,9 +47,11 @@ public class Result extends ProductTest {
             }
         }
 
+
         //проверка ссылки тизера
         driver.findElements(By.className("fresh__link")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
+
     }
 }

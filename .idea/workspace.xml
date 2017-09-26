@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa138ae-3f05-47a9-baea-e4e8b0da11d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Helper.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Helper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kak_testiruem.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kak_testiruem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Katalog.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Katalog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kharakteristiki.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kharakteristiki.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kupit.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kupit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Macro_katalog.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Macro_katalog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/News_all.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/News_all.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Obzor.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Obzor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/ProductTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/ProductTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Rating.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Rating.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Result.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Tests.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Tests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/OtherScreenshots/OtherScreenshots.class" afterPath="$PROJECT_DIR$/target/test-classes/OtherScreenshots/OtherScreenshots.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ghj/TestData.class" afterPath="$PROJECT_DIR$/target/test-classes/ghj/TestData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.iml" afterPath="$PROJECT_DIR$/product.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Helper.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Helper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kak_testiruem.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Kak_testiruem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Katalog.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Katalog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kharakteristiki.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Kharakteristiki.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kupit.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Kupit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Macro_katalog.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Macro_katalog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/News_all.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/News_all.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Obzor.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Obzor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/ProductTest.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/ProductTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Rating.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Rating.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Result.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Result.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Assert/Tests.java" afterPath="$PROJECT_DIR$/src/test/java/Assert/Tests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Everyday/test.xml" afterPath="$PROJECT_DIR$/src/test/java/Everyday/test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java" afterPath="$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Screenshots/AllScreenshots.java" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/AllScreenshots.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Screenshots/Product.java" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Screenshots/testing.xml" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/testing.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ghj/TestData.java" afterPath="$PROJECT_DIR$/src/test/java/ghj/TestData.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,8 +48,8 @@
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Screenshots/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="132" column="32" lean-forward="true" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
+            <state relative-caret-position="1802">
+              <caret line="132" column="32" lean-forward="false" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -43,18 +68,28 @@
       <file leaf-file-name="Products.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Everyday/Products.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
+            <state relative-caret-position="1258">
               <caret line="95" column="88" lean-forward="false" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OtherScreenshots.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OtherScreenshots.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="131" column="76" lean-forward="false" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
+            <state relative-caret-position="1343">
+              <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseJson.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ghj/ParseJson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -63,7 +98,7 @@
       <file leaf-file-name="About.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Assert/About.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="170">
               <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding />
             </state>
@@ -73,8 +108,8 @@
       <file leaf-file-name="Kupit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Assert/Kupit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -92,23 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObzorOnMarket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Assert/ObzorOnMarket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ghj/TestData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="357">
+              <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -215,7 +238,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -235,7 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,15 +328,16 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/Screenshots/testing.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="setEx&#9;PSI&#9;JAVA://Screenshots.ProductTest#setExpectedScreenshot" />
   </component>
   <component name="RecentsManager">
@@ -935,23 +958,22 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32275712" sideWeight="0.2822757" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30552545" sideWeight="0.15671642" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30552545" sideWeight="0.8432836" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30552545" sideWeight="0.8432836" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14232409" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -964,6 +986,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32275712" sideWeight="0.2822757" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1017,13 +1040,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.11/testng-6.11-sources.jar!/org/testng/internal/collections/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.11/testng-6.11-sources.jar!/org/testng/internal/annotations/JDK15AnnotationFinder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1098,9 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-          <folding>
-            <element signature="e#22821#22822#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1340,16 +1353,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ghj/TestData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="357">
+          <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Screenshots/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="132" column="32" lean-forward="true" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
+        <state relative-caret-position="1802">
+          <caret line="132" column="32" lean-forward="false" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1364,7 +1377,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Everyday/Products.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
+        <state relative-caret-position="1258">
           <caret line="95" column="88" lean-forward="false" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
           <folding />
         </state>
@@ -1372,7 +1385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Assert/About.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="170">
           <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
@@ -1380,8 +1393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Assert/Kupit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="238">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1396,20 +1409,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Assert/ObzorOnMarket.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Assert/ObzorOnMarket.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1343">
+          <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ghj/ParseJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="131" column="76" lean-forward="false" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
+        <state relative-caret-position="68">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>

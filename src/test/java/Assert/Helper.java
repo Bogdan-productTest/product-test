@@ -19,8 +19,6 @@ public class Helper extends ProductTest {
         driver.get(url + katalog + typePage);
         assertTitle("Какой телефон лучше купить в 2017 году, как выбрать смартфон | Product-test.ru");
 
-
-
         //проверка SEO и микроразметки
         List<WebElement> listOG = driver.findElements(By.tagName("meta"));
         System.out.println(listOG);
@@ -50,9 +48,13 @@ public class Helper extends ProductTest {
             }
         }
 
+
+
         //проверка ссылки тизера
         driver.findElements(By.className("fresh__link")).get(0).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         assertLink("obzor");
+
+
     }
 }
