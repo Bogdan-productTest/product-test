@@ -19,17 +19,18 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ParseJson {
+public class GetNameShop {
     static HSSFSheet sheet;
     static Object [][] o;
     static Row row;
     static HSSFWorkbook workbook;
+    static int d=0;
 
     @BeforeClass
     public static void parseXML() throws IOException {
 
         // Read XSL file
-        FileInputStream inputStream = new FileInputStream(new File("C:/Users/Тестер/Desktop/шины.xls"));
+        FileInputStream inputStream = new FileInputStream(new File("C:/Users/Тестер/Desktop/тест.xls"));
 
         // Get the workbook instance for XLS file
         workbook = new HSSFWorkbook(inputStream);
@@ -69,11 +70,12 @@ public class ParseJson {
 
     @Test(dataProvider = "offers")
     public static void parseNadavi(String id, String url, int k) throws Exception {
+
         // build a URL
         //double id1 = Integer.parseInt(id);
-        String s = "http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_name_=Puky%204102%20Z2%20Lovely%20Pink&p4g_yid_="+ id +"&p4g_u_ip_=" +
+        String s = "http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_name_=Puky%204102%20Z2%20Lovely%20Pink&p4g_gid_="+ id +"&p4g_unique_offers_=1&p4g_u_ip_=" +
                 "77.72.253.17";
-              //  "178.219.186.12";
+        //  "178.219.186.12";
         // System.out.println(s);
         // read from the URL
         Scanner scan = new Scanner(new URL(s).openStream());
@@ -84,28 +86,25 @@ public class ParseJson {
 
         // build a JSON object
         JSONObject obj = new JSONObject(str);
-        System.out.println("Название товара на PT: " + url);
-        System.out.println("Название товара в Nadavi: " + obj.getString("GoodFullName"));
-        sheet = workbook.getSheetAt(0);
-        sheet.getRow(k-1).createCell(2).setCellValue(obj.getString("GoodFullName"));
-        sheet.getRow(k-1).createCell(3).setCellValue(obj.getString("KatalogName"));
 
-        JSONArray arrayOffers = obj.getJSONArray("offers");
-
-        sheet.getRow(k-1).createCell(4).setCellValue(arrayOffers.length());
-        //row.createCell(2).setCellValue(obj.getString("GoodFullName"));
-        for (int i = 0; i < arrayOffers.length(); i++) {
-            JSONObject o = (JSONObject) arrayOffers.get(i);
-//            System.out.println(o.getString("OfferName"));
-            sheet.getRow(k-1).createCell(i+5).setCellValue(o.getString("OfferName"));
-            //row.createCell(i+3).setCellValue(o.getString("OfferName"));
-        }
-
+        JSONArray arrayShop = obj.getJSONArray("offers");
+        System.out.println(arrayShop.length());
+if (arrayShop.length() > 0) {
+    for (int i = 0; i < arrayShop.length(); i++) {
+        JSONObject o = (JSONObject) arrayShop.get(i);
+//        System.out.println(o.get("ShopName"));
+//        System.out.println(o.getString("ShopName"));
+        sheet.createRow(d+i);
+        sheet.getRow(d + i).createCell(2).setCellValue(o.getString("ShopName"));
+    }
+    d = d + arrayShop.length();
+    System.out.println(d);
+}
     }
 
     @AfterClass
     public void createFile () throws IOException {
-        File file = new File("C:/Users/Тестер/Desktop/шины_результат.xls");
+        File file = new File("C:/Users/Тестер/Desktop/результат.xls");
         file.getParentFile().mkdirs();
 
         FileOutputStream outFile = new FileOutputStream(file);

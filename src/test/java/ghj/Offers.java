@@ -20,6 +20,48 @@ public class Offers {
     @DataProvider(name = "url")
     public Object[] createData1() {
         return new Object[]{
+                "https://product-test.ru/shiny/nokian-nordman-5/kupit",
+                "https://product-test.ru/shiny/nokian-hakkapeliitta-7/kupit",
+                "https://product-test.ru/shiny/pirelli-ice-zero/kupit",
+                "https://product-test.ru/shiny/nokian-hakkapeliitta-8/kupit",
+                "https://product-test.ru/shiny/goodyear-ultra-grip-ice-arctic/kupit",
+                "https://product-test.ru/shiny/nokian-nordman-5-suv/kupit",
+                "https://product-test.ru/shiny/yokohama-ice-guard-ig35/kupit",
+                "https://product-test.ru/shiny/nokian-hakkapeliitta-8-suv/kupit",
+                "https://product-test.ru/shiny/cordiant-snow-cross/kupit",
+                "https://product-test.ru/shiny/toyo-observe-g3-ice/kupit",
+                "https://product-test.ru/shiny/bridgestone-blizzak-spike-01/kupit",
+                "https://product-test.ru/shiny/nokian-hakkapeliitta-r2/kupit",
+                "https://product-test.ru/shiny/continental-icecontact-2/kupit",
+                "https://product-test.ru/shiny/gislaved-nord-frost-200/kupit",
+                "https://product-test.ru/shiny/nokian-nordman-sx/kupit",
+                "https://product-test.ru/shiny/bridgestone-blizzak-dm-v2/kupit",
+                "https://product-test.ru/shiny/hankook-i-pike-rw11/kupit",
+                "https://product-test.ru/shiny/sava-eskimo-stud/kupit",
+                "https://product-test.ru/shiny/nokian-hakkapeliitta-r2-suv/kupit",
+                "https://product-test.ru/shiny/nokian-nordman-rs2/kupit",
+                "https://product-test.ru/shiny/toyo-observe-gsi-5/kupit",
+                "https://product-test.ru/shiny/viatti-brina-v-521/kupit",
+                "https://product-test.ru/shiny/viatti-brina-nordico-v-522/kupit",
+                "https://product-test.ru/shiny/tigar-sigura-stud/kupit",
+                "https://product-test.ru/shiny/kumho-wintercraft-ice-wi31/kupit",
+                "https://product-test.ru/shiny/nexen-winguard-winspike-wh6/kupit",
+                "https://product-test.ru/shiny/yokohama-ice-guard-ig50/kupit",
+                "https://product-test.ru/shiny/nokian-nordman-rs2-suv/kupit",
+                "https://product-test.ru/shiny/yokohama-ice-guard-ig55/kupit",
+                "https://product-test.ru/shiny/hankook-dynapro-i-cept-rw08/kupit",
+                "https://product-test.ru/shiny/michelin-primacy-3/kupit",
+                "https://product-test.ru/shiny/continental-contipremiumcontact-5/kupit",
+                "https://product-test.ru/shiny/michelin-latitude-x-ice-north-2/kupit",
+                "https://product-test.ru/shiny/continental-contivikingcontact-6/kupit",
+                "https://product-test.ru/shiny/tigar-winter-1/kupit",
+                "https://product-test.ru/shiny/continental-icecontact-2-suv/kupit",
+                "https://product-test.ru/shiny/matador-mp-50-sibir-ice/kupit",
+                "https://product-test.ru/shiny/michelin-energy-xm2/kupit",
+                "https://product-test.ru/shiny/nokian-hakka-green-2/kupit",
+                "https://product-test.ru/shiny/michelin-pilot-alpin-pa4/kupit"
+
+
 
         };
     }
@@ -37,7 +79,7 @@ public class Offers {
 
     @Test(dataProvider = "url")
     public void testOffers(String URL) {
-        driver.get(URL);
+        driver.get(URL + "?city=Санкт-Петербург");
         driver.findElements(By.className("image-buy"));
 
         WebElement offersMessageElement = (new WebDriverWait(driver, 3)).until(ExpectedConditions.presenceOfElementLocated(By.id("buy_button")));
