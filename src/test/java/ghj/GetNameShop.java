@@ -25,12 +25,13 @@ public class GetNameShop {
     static Row row;
     static HSSFWorkbook workbook;
     static int d=0;
+    static int x=0;
 
     @BeforeClass
     public static void parseXML() throws IOException {
 
         // Read XSL file
-        FileInputStream inputStream = new FileInputStream(new File("C:/Users/Тестер/Desktop/тест.xls"));
+        FileInputStream inputStream = new FileInputStream(new File("C:/Users/Тестер/Desktop/тест2.xls"));
 
         // Get the workbook instance for XLS file
         workbook = new HSSFWorkbook(inputStream);
@@ -63,6 +64,17 @@ public class GetNameShop {
         }
     }
 
+    @AfterClass
+    public static void createFile () throws IOException {
+        File file = new File("C:/Users/Тестер/Desktop/результат" + x + ".xls");
+        file.getParentFile().mkdirs();
+
+        FileOutputStream outFile = new FileOutputStream(file);
+        workbook.write(outFile);
+        System.out.println("Created file: " + file.getAbsolutePath());
+        x= x+1;
+    }
+
     @DataProvider(name = "offers")
     public static Object[][] credentials() {
         return o;
@@ -88,13 +100,20 @@ public class GetNameShop {
         JSONObject obj = new JSONObject(str);
 
         JSONArray arrayShop = obj.getJSONArray("offers");
-        System.out.println(arrayShop.length());
+
+        if (d+arrayShop.length()>= 20) {
+            createFile();
+            d=0;
+
+        }
+
 if (arrayShop.length() > 0) {
     for (int i = 0; i < arrayShop.length(); i++) {
         JSONObject o = (JSONObject) arrayShop.get(i);
 //        System.out.println(o.get("ShopName"));
 //        System.out.println(o.getString("ShopName"));
-        sheet.createRow(d+i);
+            sheet.createRow(d + i);
+
         sheet.getRow(d + i).createCell(2).setCellValue(o.getString("ShopName"));
     }
     d = d + arrayShop.length();
@@ -102,13 +121,5 @@ if (arrayShop.length() > 0) {
 }
     }
 
-    @AfterClass
-    public void createFile () throws IOException {
-        File file = new File("C:/Users/Тестер/Desktop/результат.xls");
-        file.getParentFile().mkdirs();
 
-        FileOutputStream outFile = new FileOutputStream(file);
-        workbook.write(outFile);
-        System.out.println("Created file: " + file.getAbsolutePath());
-    }
 }
