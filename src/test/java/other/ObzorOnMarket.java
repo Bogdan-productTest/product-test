@@ -40,11 +40,7 @@ public class ObzorOnMarket {
     @BeforeClass
     protected void SQLConnect() throws SQLException {
 
-        String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
-
-        conn = DriverManager.getConnection(url);
-
-        stmt = conn.createStatement();
+        SQLConnect();
 
         //  ChromeOptions options = new ChromeOptions();
         //  options.addArguments("--headless");

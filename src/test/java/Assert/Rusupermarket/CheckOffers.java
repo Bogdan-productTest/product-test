@@ -21,6 +21,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
 
+import static Assert.MyConfig.getTelegramApiString;
+
 public class CheckOffers {
 
         static WebDriver driver;
@@ -34,6 +36,7 @@ public class CheckOffers {
         static Queue<Url> queue;
         static Url urlPT;
         static Url urlRS;
+        static String telegramApiString;
 
         private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
 
@@ -66,6 +69,11 @@ public class CheckOffers {
 
     }
 
+    @BeforeClass
+    public static void getTelegramConfig (){
+        telegramApiString = getTelegramApiString();
+    }
+
     public static Url getUrlFromPool (Queue <Url> queue) {
         Url url = queue.peek();
         queue.poll();
@@ -76,7 +84,7 @@ public class CheckOffers {
     public static void sendMessage (String chat_id, String text) throws IOException {
         final OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("https://api.telegram.org/bot428163085:AAFU4Y7IBtxoVp4gRx070y2rQECweshF8wM/sendMessage?chat_id=" + chat_id + "&text=" + text)
+                .url(telegramApiString + "/sendMessage?chat_id=" + chat_id + "&text=" + text)
                 .get()
                 .build();
 
@@ -92,7 +100,7 @@ public class CheckOffers {
                 .build();
 
         Request request = new Request.Builder()
-                .url("https://api.telegram.org/bot428163085:AAFU4Y7IBtxoVp4gRx070y2rQECweshF8wM/sendPhoto?chat_id=" + chat_id
+                .url(telegramApiString + "/sendPhoto?chat_id=" + chat_id
                         //+ "&caption=test"
                         )
                 .post(requestBody)
