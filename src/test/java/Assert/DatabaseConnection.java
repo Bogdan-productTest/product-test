@@ -6,7 +6,6 @@ import java.sql.*;
 public class DatabaseConnection {
 
     static Statement stmt = null;
-    static ResultSet rs = null;
     static Connection conn = null;
 
     public static Statement SQLConnect() throws SQLException {

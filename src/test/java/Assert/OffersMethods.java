@@ -1,0 +1,140 @@
+package Assert;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
+
+import static Assert.SQLQueries.getCityIdFromCityName;
+import static Assert.SQLQueries.getNadaviIdFromId;
+
+public class OffersMethods {
+    static WebDriver driver;
+
+    //??
+    public static void switchToSecondHandles () {
+        String x = Keys.chord(Keys.CONTROL, Keys.RETURN);
+        String[] myArray = driver.getWindowHandles().toArray(new String[2]);
+            driver.switchTo().window(myArray[1]);
+    }
+
+    public static String getOffersFromPT(String id, String city) throws IOException {
+        final OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("https://product-test.ru/product/getnadavioffers?id=" + id + "&city=" + city)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        return response.body().string();
+    }
+
+    public static String getOffersFromNadavi(String id, String cityId) throws IOException {
+        final OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_gid_=" + id + "&p4g_city_id_=" + cityId)
+                .get()
+                .build();
+
+        Response response = client.newCall(request).execute();
+        return response.body().string();
+    }
+
+    public static void main(String idProduct, String cityName) throws IOException, InterruptedException, JSONException, SQLException {
+
+        String nadaviId = getNadaviIdFromId(idProduct);
+        System.out.println("Nadavi id = " + nadaviId);
+        String cityId = getCityIdFromCityName(cityName);
+        System.out.println("city id = " + cityId);
+
+        String jsonoffersPT = getOffersFromPT(idProduct, cityName);
+        String jsonoffersND = getOffersFromNadavi(nadaviId, cityId);
+
+        //Получаем список оферов отображаемых на РТ
+        JSONObject offersPT = new JSONObject( jsonoffersPT);
+
+        JSONArray arrayOffersPT = offersPT.getJSONArray("Offers");
+        System.out.println("Количество оферов на РТ: " + arrayOffersPT.length());
+
+        //Получаем список оферов отдаваемых ND
+        JSONObject offersND = new JSONObject(jsonoffersND);
+        JSONArray arrayOffersND = offersND.getJSONArray("offers");
+        System.out.println("Количество оферов на ND: " + arrayOffersND.length());
+
+        //Проверяем равно ли кол-во оферов на ND и PT
+        //  Assert.assertEquals(arrayOffersND.length(), arrayOffersPT.length());
+
+        //Проверяем равны ли строки оферов отдаваемых ND и отображаемых на РТ
+        for (int i = 0; i<arrayOffersND.length(); i++) {
+
+            JSONObject offer = arrayOffersND.getJSONObject(i);
+
+            //Удаляем параметр Color из ответа ND
+            offer.remove("Color");
+
+            System.out.println("PT #" + (i+1) + " : " + arrayOffersPT.getString(i));
+            System.out.println("ND #" + (i+1) + " : " + arrayOffersND.getString(i));
+
+            Assert.assertEquals(arrayOffersPT.getString(i), arrayOffersND.getString(i));
+            arrayOffersPT.getString(i).equals(arrayOffersND.getString(i));
+            System.out.println("Офер №" + (i + 1) + " соответствует" );
+
+            String cityNameMod = cityName.substring(0, cityName.length() -1);
+            String deliveryInfo = offer.getString("DeliveryInfo");
+
+            System.out.println(deliveryInfo.substring(0,2));
+            if (deliveryInfo.substring(0,3).equals("по ")) {
+                System.out.println("по городу");
+                Assert.assertEquals(deliveryInfo.substring(3, deliveryInfo.length() - 1), cityNameMod);
+            } else {
+                System.out.println("доставка в город");
+                String deliveryInfoMod = deliveryInfo.substring(2, cityName.length() + 1);
+                System.out.println(deliveryInfoMod);
+                Assert.assertEquals(deliveryInfoMod, cityNameMod);
+            }
+        }
+    }
+
+    //проверка корректности перехода в магазин
+    public static void offerClick () {
+        driver = new ChromeDriver();
+        driver.get("https://product-test.ru/koliaski/adamex-barletta-2-v-1-3-v-1/kupit");
+        //клик по логотипу
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector("#shops-block > div:nth-child(1) > div:nth-child(1) > div > a > img")).click();
+
+        //клик по кнопке цены
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector("#shops-block > div:nth-child(1) > div:nth-child(2) > a")).click();
+
+        //получить ссылку на магазин из логотипа
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector("#shops-block > div:nth-child(1) > div:nth-child(1) > div > a > img")).getAttribute("data-buy-url");
+
+        //получить ссылку на магазин из цены
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector("#shops-block > div:nth-child(1) > div:nth-child(2) > a")).getAttribute("data-buy-url");
+    }
+
+    @Test
+    public static void main1 () throws SQLException, InterruptedException, JSONException, IOException {
+
+        // main("5246", "Москва");
+        // main("52464", "Казань");
+        offerClick();
+
+    }
+
+}
