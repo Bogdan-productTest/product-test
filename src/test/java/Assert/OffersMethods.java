@@ -24,7 +24,7 @@ public class OffersMethods {
     static WebDriver driver;
 
     //??
-    public static void switchToSecondHandles () {
+    public static void switchToSecondHandles (WebDriver driver) {
         String x = Keys.chord(Keys.CONTROL, Keys.RETURN);
         String[] myArray = driver.getWindowHandles().toArray(new String[2]);
             driver.switchTo().window(myArray[1]);

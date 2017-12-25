@@ -42,7 +42,7 @@ public class SEO {
         // Get first sheet from the workbook
         sheet = workbook.getSheetAt(0);
 
-        array = new Object[sheet.getLastRowNum() + 1][8];
+        array = new Object[sheet.getLastRowNum() + 1][9];
         // Get iterator to all the rows in current sheet
         Iterator<Row> rowIterator = sheet.iterator();
         row = rowIterator.next();
@@ -53,16 +53,19 @@ public class SEO {
             // Get iterator to all cells of current row
             Iterator<Cell> cellIterator = row.cellIterator();
             Cell c;
-            for (int j = 0; j<8; j++) {
+            for (int j = 0; j<9; j++) {
                 c = cellIterator.next();
                 array[i][j] = c.toString();
                 //System.out.println(c);
             }
         }
+        System.out.println("количество строк равно " + sheet.getLastRowNum());
         System.out.println("парсинг xls завершен");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+        //  ChromeOptions options = new ChromeOptions();
+        //  options.addArguments("--headless");
+        driver = new ChromeDriver(
+                //  options
+        );
     }
 
     @DataProvider(name = "test")
@@ -71,7 +74,17 @@ public class SEO {
     }
 
     @Test(dataProvider = "test")
-    public void assertSeo(String url, String title, String ogTitle, String site, String type, String image, String description, String keywords) {
+    public void assertSeo(String url, String title, String ogTitle, String site, String type, String image, String description, String ogDescription, String keywords) {
+
+        System.out.println("url равен " + url);
+        System.out.println("title равен " + title);
+        System.out.println("ogTitle равен " + ogTitle);
+        System.out.println("site равен " + site);
+        System.out.println("type равен " + type);
+        System.out.println("image равен " + image);
+        System.out.println("description равен " + description);
+        System.out.println("ogDescription равен " + ogDescription);
+        System.out.println("keywords равен " + keywords);
 
         driver.get(url);
 
@@ -96,7 +109,9 @@ public class SEO {
                 } else if (property.equals("og:type")) {
                     Assert.assertEquals(assertOG.getAttribute("content"), type);
                 } else if (property.equals("og:description")) {
-                    Assert.assertEquals(assertOG.getAttribute("content"), description);
+                    Assert.assertTrue(
+                            assertOG.getAttribute("content").equals(ogDescription) ||
+                                    assertOG.getAttribute("content").equals(description));
                 } else if (name.equals("description")) {
                     Assert.assertEquals(assertOG.getAttribute("content"), description);
                 } else if (name.equals("Keywords")) {
