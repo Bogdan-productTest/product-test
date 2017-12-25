@@ -1,79 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa138ae-3f05-47a9-baea-e4e8b0da11d0" name="Default" comment="v 2.4">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/other/ObzorOnMarket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/other/Offers.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_64.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/geckodriver-v0.18.0-linux64.tar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/geckodriver-v0.18.0-linux64/geckodriver" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sitemap(2).xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sitemap_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/About.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Agreement.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Contact.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Helper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/HomePage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kak_testiruem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Katalog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kharakteristiki.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Kupit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Macro_katalog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/News.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/News_all.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Obzor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/ProductTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Rating.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Result.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Stati.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Tests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/Uslughitiestirovaniia.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/Assert/assert.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/ObzorOnMarket.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/Offers.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/Offersxls.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/TestData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/TestPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/ghj/test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/ghj/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/тест2.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/тест3.xls" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/Everyday/Products.java" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/Everyday/Products.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/Everyday/ScreenshotsImportant.java" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/Everyday/ScreenshotsImportant.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/Everyday/test.xml" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/Everyday/test.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/OtherScreenshots/OtherScreenshots.java" afterPath="$PROJECT_DIR$/src/test/java/Screenshots/OtherScreenshots/OtherScreenshots.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/ghj/GetNameShop.java" afterPath="$PROJECT_DIR$/src/test/java/other/GetNameShop.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/ghj/LastMod.java" afterPath="$PROJECT_DIR$/src/test/java/other/LastMod.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/ghj/ParseJson.java" afterPath="$PROJECT_DIR$/src/test/java/other/ParseJson.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/ghj/listsitemaps.xml" afterPath="$PROJECT_DIR$/src/test/java/other/listsitemaps.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/About.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/About.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Agreement.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Agreement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Contact.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Contact.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Helper.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Helper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/HomePage.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kak_testiruem.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kak_testiruem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Katalog.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Katalog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kharakteristiki.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kharakteristiki.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Kupit.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Kupit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Macro_katalog.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Macro_katalog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/News.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/News.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/News_all.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/News_all.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Obzor.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Obzor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Rating.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Rating.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Result.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Result.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Stati.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Stati.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Tests.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Tests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Assert/Uslughitiestirovaniia.class" afterPath="$PROJECT_DIR$/target/test-classes/Assert/Uslughitiestirovaniia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ghj/GetNameShop.class" afterPath="$PROJECT_DIR$/target/test-classes/ghj/GetNameShop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ghj/ObzorOnMarket.class" afterPath="$PROJECT_DIR$/target/test-classes/ghj/ObzorOnMarket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ghj/Offers.class" afterPath="$PROJECT_DIR$/target/test-classes/ghj/Offers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ghj/ParseJson.class" afterPath="$PROJECT_DIR$/target/test-classes/ghj/ParseJson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="0fa138ae-3f05-47a9-baea-e4e8b0da11d0" name="Default" comment="v 1.0">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Assert/SEO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/other/Create_icml.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.iml" afterPath="$PROJECT_DIR$/product.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,26 +47,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetNameShop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/other/GetNameShop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="44" column="53" lean-forward="false" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Koliaski.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/other/Koliaski.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LastMod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/other/LastMod.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestOffers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestOffers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Assert/Rusupermarket/TestOffers.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1590">
@@ -165,6 +76,28 @@
                 <element signature="imports" expanded="true" />
                 <marker date="1514185236214" expanded="true" signature="1018:1068" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SEO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Assert/SEO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Create_icml.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/other/Create_icml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="41" column="51" lean-forward="true" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -221,9 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/Screenshots/Macro_katalog.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Screenshots/News_all.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Screenshots/News.java" />
         <option value="$PROJECT_DIR$/src/test/java/Screenshots/Tests.java" />
         <option value="$PROJECT_DIR$/src/test/java/Screenshots/Producttest.java" />
         <option value="$PROJECT_DIR$/assert.xml" />
@@ -272,6 +202,9 @@
         <option value="$PROJECT_DIR$/src/test/java/other/Offers.java" />
         <option value="$PROJECT_DIR$/src/test/java/other/ParseJson.java" />
         <option value="$PROJECT_DIR$/src/test/java/Assert/Rusupermarket/TestOffers.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Assert/SEO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/other/create_icml.java" />
+        <option value="$PROJECT_DIR$/src/test/java/other/Create_icml.java" />
       </list>
     </option>
   </component>
@@ -291,7 +224,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -343,6 +276,14 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Assert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="product-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="product-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -915,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502116538373</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v 1.0">
+      <created>1514185300500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514185300500</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -951,19 +899,20 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3195652" sideWeight="0.094791666" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.49270833" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23913044" sideWeight="0.49840087" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31630436" sideWeight="0.51875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23913044" sideWeight="0.50159913" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31630436" sideWeight="0.51875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33695653" sideWeight="0.5072917" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1016,7 +965,8 @@
     <MESSAGE value="v 2.0 with assert title" />
     <MESSAGE value="v 2.1 with assert title" />
     <MESSAGE value="v 2.2 with assert link" />
-    <option name="LAST_COMMIT_MESSAGE" value="v 2.2 with assert link" />
+    <MESSAGE value="v 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,15 +982,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/WebDriver.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Screenshots/Everyday/test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/HashSet.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/ashot/ashot/1.5.4/ashot-1.5.4-sources.jar!/ru/yandex/qatools/ashot/AShot.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Screenshots/testing.xml">
@@ -1402,6 +1343,24 @@
             <element signature="imports" expanded="true" />
             <marker date="1514185236214" expanded="true" signature="1018:1068" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Assert/SEO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/other/Create_icml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="41" column="51" lean-forward="true" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
