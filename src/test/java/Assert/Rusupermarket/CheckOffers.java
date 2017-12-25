@@ -14,7 +14,6 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.net.UnknownHostException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.LinkedList;

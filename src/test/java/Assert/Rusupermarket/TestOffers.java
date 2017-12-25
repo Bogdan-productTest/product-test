@@ -1,35 +1,21 @@
 package Assert.Rusupermarket;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import javax.xml.transform.Result;
-import java.io.File;
 import java.io.IOException;
-import java.io.Serializable;
-import java.io.StringReader;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
-import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static Assert.DatabaseConnection.SQLConnect;
-import static Assert.Rusupermarket.CheckOffers.browser;
 
 
 public class TestOffers {

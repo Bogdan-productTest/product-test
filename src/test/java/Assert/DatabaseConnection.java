@@ -1,7 +1,5 @@
 package Assert;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import static Assert.MyConfig.*;
 import java.sql.*;
 
