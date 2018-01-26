@@ -5,6 +5,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,6 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -30,8 +32,13 @@ public class ParseJson {
     public static void parseXML() throws IOException {
 
         fileName =
-         "кофемолки";
-
+      //   "акустические системы";
+      // "видеокамеры";
+     //   "жесткие диски";
+        "камины";
+        //   "мониторы";
+        //   "навигаторы";
+        //   "роутеры";
 
         // Read XSL file
         FileInputStream inputStream = new FileInputStream(new File("C:/Users/Mirror/Desktop/product-test/" + fileName + ".xls"));
@@ -72,15 +79,15 @@ public class ParseJson {
         return o;
     }
 
-    @Test(dataProvider = "offers")
+    @Test(dataProvider = "offers", enabled = true)
     public static void parseNadavi(String id, String url, int k) throws Exception {
         // build a URL
         //double id1 = Integer.parseInt(id);
-        String s = "http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_name_=Puky%204102%20Z2%20Lovely%20Pink&p4g_gid_="+ id +"&p4g_u_ip_=";
-
+        String s = "http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_gid_="+ id +"&p4g_u_ip_=";
+/*
         // System.out.println(s);
         // read from the URL
-        Scanner scan = new Scanner(new URL(s + ipPiter).openStream());
+        Scanner scan = new Scanner(new URL(s + ipMoscow).openStream());
         String str = new String();
         while (scan.hasNext())
             str += scan.nextLine();
@@ -94,12 +101,14 @@ public class ParseJson {
         //sheet.getRow(k-1).createCell(2).setCellValue(obj.getString("GoodFullName"));
         //sheet.getRow(k-1).createCell(3).setCellValue(obj.getString("KatalogName"));
 
+        //получить минимальную цену
+     //   sheet.getRow(k-1).createCell(4).setCellValue(obj.getString("PriceMin"));
+
         JSONArray arrayOffers = obj.getJSONArray("offers");
-
-        sheet.getRow(k-1).createCell(4).setCellValue(arrayOffers.length());
-
-        scan = new Scanner(new URL(s + ipKazan).openStream());
-        str = new String();
+        sheet.getRow(k-1).createCell(5).setCellValue(arrayOffers.length());
+*/
+        Scanner scan = new Scanner(new URL(s + ipKazan).openStream());
+        String str = new String();
         while (scan.hasNext())
             str += scan.nextLine();
         scan.close();
@@ -110,10 +119,12 @@ public class ParseJson {
         System.out.println("Название товара в Nadavi: " + obj1.getString("GoodFullName"));
         sheet = workbook.getSheetAt(0);
 
-        arrayOffers = obj1.getJSONArray("offers");
+        //получить минимальную цену
+     //   sheet.getRow(k-1).createCell(7).setCellValue(obj1.getString("PriceMin"));
 
-        sheet.getRow(k-1).createCell(5).setCellValue(arrayOffers.length());
-        //row.createCell(2).setCellValue(obj.getString("GoodFullName"));
+        JSONArray arrayOffers = obj1.getJSONArray("offers");
+        sheet.getRow(k-1).createCell(6).setCellValue(arrayOffers.length());
+   //     row.createCell(2).setCellValue(obj.getString("GoodFullName"));
 //        for (int i = 0; i < arrayOffers.length(); i++) {
 //            JSONObject o = (JSONObject) arrayOffers.get(i);
 ////            System.out.println(o.getString("OfferName"));
@@ -121,6 +132,30 @@ public class ParseJson {
 //            //row.createCell(i+3).setCellValue(o.getString("OfferName"));
 //        }
 
+    }
+
+    @Test(dataProvider = "offers", enabled = false)
+    public static void parseMobiGuru (String id, String url, int k) throws IOException, JSONException {
+        String s = "http://api.mobiguru.ru/v1/model/" + id + "/offers.json?auth=c6a3ca658a87519787331a3e3c52a3ac&remote_ip=";
+
+        Scanner scan = new Scanner(new URL(s + ipKazan + "&groupBy=NONE").openStream());
+        String str = new String();
+        while (scan.hasNext())
+            str += scan.nextLine();
+        scan.close();
+
+        // build a JSON object
+        JSONObject obj = new JSONObject(str);
+
+        sheet = workbook.getSheetAt(0);
+
+        String numOffers = obj
+                .getJSONObject("models")
+                .getString("total")
+              //  .getJSONObject("total")
+                ;
+
+        sheet.getRow(k-1).createCell(4).setCellValue(numOffers.toString());
     }
 
     @AfterClass

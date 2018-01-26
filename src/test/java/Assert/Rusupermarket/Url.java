@@ -1,9 +1,6 @@
 package Assert.Rusupermarket;
 
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Url {
     String url;
     boolean status = true;
@@ -12,6 +9,7 @@ public class Url {
     int dateLastReport = 0;
     int timeMessage;
     boolean messageIsSent = false;
+    String selector;
 
     public void setStatus(boolean status) {
         this.status = status;
@@ -57,4 +55,11 @@ public class Url {
         this.messageIsSent = messageIsSent;
     }
 
+    public String getSelector() {
+        return selector;
+    }
+
+    public void setSelector(String selector) {
+        this.selector = selector;
+    }
 }
