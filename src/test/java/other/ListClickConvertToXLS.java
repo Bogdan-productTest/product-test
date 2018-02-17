@@ -30,11 +30,11 @@ public class ListClickConvertToXLS {
     static Sheet sheet;
     static Row row;
     static int page;
-    static String URL = URLPT;
+    static String URL;
 
-    public static JSONObject getJSON (String URL) throws IOException, JSONException {
+    public static JSONObject getJSON (String s) throws IOException, JSONException {
 
-        Scanner scan = new Scanner(new URL(URL).openStream());
+        Scanner scan = new Scanner(new URL((initKey()) + s).openStream());
         String str = new String();
         while (scan.hasNext())
             str += scan.nextLine();
@@ -46,14 +46,20 @@ public class ListClickConvertToXLS {
     }
 
     @BeforeClass
-    public static void initKey() {
-        URLPT = "http://api.mobiguru.ru/v1/partner/clicks.json" + getMobiguruApiKeyPT() + "&period_begin=2018-01-11&count=1000";
-        URLP = "http://api.mobiguru.ru/v1/partner/clicks.json" + getMobiguruApiKeyP() + "&period_begin=2018-01-11&count=1000";
+    public static String initKey() {
+        URLPT = "http://api.mobiguru.ru/v1/partner/clicks.json" + getMobiguruApiKeyPT() +
+                "&period_begin=2018-02-16" +
+                "&count=1000";
+        URLP = "http://api.mobiguru.ru/v1/partner/clicks.json" + getMobiguruApiKeyP() +
+                "&period_begin=2017-01-11" +
+                "&count=1000";
+
+        return URLPT;
     }
 
     @BeforeClass
     public static void getNumPage() throws IOException, JSONException {
-       page =  getJSON(URL).getInt("total")/1000 + 1;
+       page =  getJSON("").getInt("total")/1000 + 1;
     }
 
     @BeforeClass
@@ -70,7 +76,7 @@ public class ListClickConvertToXLS {
         for (int j = 0; j < page ; j++) {
 
             int lastRow = sheet.getLastRowNum();
-            obj = getJSON(URL + "&page=" + (j + 1));
+            obj = getJSON(initKey() + "&page=" + (j + 1));
 
         JSONArray arrayData = obj.getJSONArray("data");
       //  System.out.println(arrayData.length());

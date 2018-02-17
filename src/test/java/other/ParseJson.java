@@ -32,13 +32,12 @@ public class ParseJson {
     public static void parseXML() throws IOException {
 
         fileName =
-      //   "акустические системы";
-      // "видеокамеры";
-     //   "жесткие диски";
-        "камины";
-        //   "мониторы";
-        //   "навигаторы";
-        //   "роутеры";
+       // "домашние кинотеатры";
+       //"кухонные комбайны";
+       //"миксеры";
+        // "очистители воздуха";
+        // "пароочистители";
+         "testVM";
 
         // Read XSL file
         FileInputStream inputStream = new FileInputStream(new File("C:/Users/Mirror/Desktop/product-test/" + fileName + ".xls"));
@@ -84,7 +83,7 @@ public class ParseJson {
         // build a URL
         //double id1 = Integer.parseInt(id);
         String s = "http://info.price.nadavi.ru/p4g3.php?p4g_api_type_=json&p4g_partner_=77800&p4g_gid_="+ id +"&p4g_u_ip_=";
-/*
+
         // System.out.println(s);
         // read from the URL
         Scanner scan = new Scanner(new URL(s + ipMoscow).openStream());
@@ -106,9 +105,9 @@ public class ParseJson {
 
         JSONArray arrayOffers = obj.getJSONArray("offers");
         sheet.getRow(k-1).createCell(5).setCellValue(arrayOffers.length());
-*/
-        Scanner scan = new Scanner(new URL(s + ipKazan).openStream());
-        String str = new String();
+
+        scan = new Scanner(new URL(s + ipKazan).openStream());
+        str = new String();
         while (scan.hasNext())
             str += scan.nextLine();
         scan.close();
@@ -122,7 +121,7 @@ public class ParseJson {
         //получить минимальную цену
      //   sheet.getRow(k-1).createCell(7).setCellValue(obj1.getString("PriceMin"));
 
-        JSONArray arrayOffers = obj1.getJSONArray("offers");
+        arrayOffers = obj1.getJSONArray("offers");
         sheet.getRow(k-1).createCell(6).setCellValue(arrayOffers.length());
    //     row.createCell(2).setCellValue(obj.getString("GoodFullName"));
 //        for (int i = 0; i < arrayOffers.length(); i++) {

@@ -2,6 +2,7 @@ package Assert.Rusupermarket;
 
 import okhttp3.*;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -19,6 +20,22 @@ public class Methods {
     private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
     private static String telegramApiString = getTelegramApiString();
 
+    //метод для создания Объектов урлов для проверки оферов
+    public static Url getUrlObject (String url, String selector, int time) {
+        Url url1 = new Url();
+        url1.setUrl(url);
+        url1.setSelector(selector);
+        url1.setTimeMessage(time);
+        return url1;
+    }
+
+    //метод для создания Объектов урлов для проверки Апи
+    public static UrlForCheckCode getUrlObject (String url, String provider) {
+        UrlForCheckCode url1 = new UrlForCheckCode();
+        url1.setUrl(url);
+        url1.setProvider(provider);
+        return url1;
+    }
 
     //метод получения урла из пула для проверки оферов
     public static Url getUrlFromPool (Queue<Url> queue) {
@@ -79,14 +96,18 @@ public class Methods {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(response1.code());
+       // System.out.println(response1.code());
 
         if (response1.code()!=200 && !urlForCheckCode.sendMessage) {
             String s = "Код ответа api " + urlForCheckCode.getProvider() + " равен " + response1.code();
-            System.out.println(s);
+           // System.out.println(s);
             urlForCheckCode.setSendMessage(true);
             sendMessage(idBogdan, s);
         }
+    }
+
+    public static double average(double average , int amountOfNumbers, double number) {
+        return ((double) average*amountOfNumbers + (double) number)/(amountOfNumbers+1);
     }
 
 }

@@ -16,6 +16,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static Assert.DatabaseConnection.SQLConnect;
+
 
 public class ObzorOnMarket {
 
@@ -39,9 +41,9 @@ public class ObzorOnMarket {
     }
 
     @BeforeClass
-    protected void SQLConnect() throws SQLException {
+    protected void SQLConnected() throws SQLException {
 
-        SQLConnect();
+       stmt = SQLConnect();
 
 
         //  ChromeOptions options = new ChromeOptions();
@@ -51,7 +53,7 @@ public class ObzorOnMarket {
         );
     }
 
-    //  @Test
+      @Test
     protected void blackList() {
         List<String> blackListProd = new ArrayList<String>();
         blackListProd.add("https://product-test.ru/proghulochnyiekoliaski/pegperegosicompleto/obzor");
@@ -105,19 +107,27 @@ public class ObzorOnMarket {
         List<WebElement> listObzor = driver.findElements(By.xpath("//div[@class='clmnA']//a"));
         System.out.println(listObzor);
         System.out.println(listObzor.size());
-
+        int i = 1;
         for (WebElement iter : listObzor) {
 
             urlObzor = iter.getAttribute("href").toString();
-            System.out.println("Проверяем следующий обзор: " + urlObzor);
+
             String urlProduct = urlObzor.substring(24, urlObzor.length() - 6);
             urlProduct = urlProduct.substring(urlProduct.indexOf("/") + 1);
             // urlProduct = urlProduct.substring(0, urlProduct.length() -6);
-            //   System.out.println("Ссылка на страницу обзор: " + urlProduct);
-            rs = stmt.executeQuery("SELECT urlFromMagazine FROM dbo.Products WHERE url='" + urlProduct + "'");
+             //  System.out.println("Ссылка на страницу обзор: " + urlProduct);
+            rs = stmt.executeQuery("SELECT 'https://market.yandex.ru/product/' + yandexmarketproductid + '/articles' FROM dbo.Products WHERE url='" + urlProduct + "'");
             rs.next();
             urlMarket = rs.getString(1);
-
+            try {
+                if (!urlMarket.equals("null")) {
+                    System.out.print(i + ") ");
+                    System.out.println("Ссылка на обзор: " + urlObzor);
+                    System.out.println("Ссылка на карточку: " + urlMarket + " ;");
+                    i++;
+                }
+            } catch (java.lang.NullPointerException e) {}
+/**
             if (urlMarket != null) {
                 //  driver.get(urlMarket + "/articles");
                 //  System.out.println("Переходим на страницу: " + urlMarket);
@@ -133,7 +143,7 @@ public class ObzorOnMarket {
             }
 
             Thread.sleep(5000);
-
+ **/
 
             //  System.out.println(rs.getString(1));
 //
