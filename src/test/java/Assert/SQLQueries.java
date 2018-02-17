@@ -6,6 +6,13 @@ import java.sql.SQLException;
 import static Assert.DatabaseConnection.SQLConnect;
 
 public class SQLQueries {
+
+    public static String getSqlResult(String query) throws SQLException {
+        ResultSet rs = SQLConnect().executeQuery(query);
+        rs.next();
+        return rs.getString(1);
+    }
+
     public static String getCityIdFromCityName(String city) throws SQLException {
         ResultSet rs = SQLConnect().executeQuery("SELECT CityId FROM dbo.Locations WHERE City='" + city + "'");
         rs.next();
@@ -17,4 +24,6 @@ public class SQLQueries {
         rs.next();
         return rs.getString(1);
     }
+
+
 }

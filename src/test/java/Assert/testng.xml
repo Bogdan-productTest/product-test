@@ -5,30 +5,27 @@
     <!--<test name="RS">-->
         <!--<parameter name="domainProd" value="rus-supermarket.ru"/>-->
         <!--<parameter name="domainStage" value="rusupermarket-staging.azurewebsites.net"/>-->
-        <!--<classes>-->
-            <!--<class name="Assert.SEO"></class>-->
-        <!--</classes>-->
     <!--</test>-->
     <!--<test name="VM">-->
         <!--<parameter name="domainProd" value="vse-magazini.ru"/>-->
         <!--<parameter name="domainStage" value="vse-magaziny-staging.azurewebsites.net"/>-->
-        <!--<classes>-->
-            <!--<class name="Assert.SEO"></class>-->
-        <!--</classes>-->
     <!--</test>-->
     <!--<test name="P">-->
         <!--<parameter name="domainProd" value="pochom.ru"/>-->
         <!--<parameter name="domainStage" value="pochom.ru"/>-->
-        <!--<classes>-->
-            <!--<class name="Assert.SEO"></class>-->
-        <!--</classes>-->
     <!--</test>-->
-    <test name="PT">
-        <parameter name="domainProd" value="product-test.ru"/>
-        <parameter name="domainStage" value="staging.product-test.ru"/>
-    <classes>
-    <class name="Assert.SEO"></class>
-    </classes>
+    <test name="Seo">
+        <parameter name="domainProdPT" value="product-test.ru"/>
+        <parameter name="domainStagePT" value="staging.product-test.ru"/>
+        <parameter name="domainProdRS" value="rus-supermarket.ru"/>
+        <parameter name="domainStageRS" value="rusupermarket-staging.azurewebsites.net"/>
+        <parameter name="domainProdVM" value="vse-magazini.ru"/>
+        <parameter name="domainStageVM" value="vse-magaziny-staging.azurewebsites.net"/>
+        <parameter name="domainProdP" value="pochom.ru"/>
+        <parameter name="domainStageP" value="pochom.ru"/>
+        <classes>
+            <class name="Assert.SEO"></class>
+        </classes>
     </test>
 
 </suite>
