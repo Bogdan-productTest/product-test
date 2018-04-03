@@ -6,8 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Queue;
 
-import static Assert.MyConfig.getPath;
 import static Assert.MyConfig.getTelegramApiString;
+import static Assert.CheckOffersBot.CheckOffers.idBogdan;
 
 public class Methods {
 
@@ -15,13 +15,11 @@ public class Methods {
     private static String telegramApiString = getTelegramApiString();
 
     //метод для создания Объектов урлов для проверки оферов
-    public static Url getUrlObject (String url, String selector, int time, String selectorGeo, boolean sendMessage) {
+    public static Url getUrlObject (String url, String selector, int time) {
         Url url1 = new Url();
         url1.setUrl(url);
-        url1.setSelectorOffers(selector);
+        url1.setSelector(selector);
         url1.setTimeMessage(time);
-        url1.setSelectorGeo(selectorGeo);
-        url1.setSendMessageToChat(sendMessage);
         return url1;
     }
 
@@ -41,6 +39,13 @@ public class Methods {
         return url;
     }
 
+    //метод получения урла из пула для проверки Api
+    public static UrlForCheckCode getUrlFromPoolForCheckCode (Queue <UrlForCheckCode> queueForCheckCode) {
+        UrlForCheckCode urlForCheckCode = queueForCheckCode.peek();
+        queueForCheckCode.poll();
+        queueForCheckCode.add(urlForCheckCode);
+        return urlForCheckCode;
+    }
 
     //метод для отправки сообщения в телеграм
     public static void sendMessage (String chat_id, String text) throws IOException {
@@ -59,7 +64,7 @@ public class Methods {
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
                 .addFormDataPart("photo", name + ".png",
-                        RequestBody.create(MEDIA_TYPE_PNG, new File(getPath() +"/screenshots/" + name + ".png")))
+                        RequestBody.create(MEDIA_TYPE_PNG, new File("C:/Users/Mirror/Desktop/product-test/screenshots/" + name + ".png")))
                 .build();
 
         Request request = new Request.Builder()
@@ -71,9 +76,32 @@ public class Methods {
         Response response = client.newCall(request).execute();
     }
 
+    //проверка кода ответа Api
+    public static void checkCode(UrlForCheckCode urlForCheckCode) throws IOException {
+        final OkHttpClient client1 = new OkHttpClient();
+        Request request1 = new Request.Builder()
+                .url(urlForCheckCode.getUrl())
+                .get()
+                .build();
+
+        Response response1 = null;
+        try {
+            response1 = client1.newCall(request1).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       // System.out.println(response1.code());
+
+        if (response1.code()!=200 && !urlForCheckCode.sendMessage) {
+            String s = "Код ответа api " + urlForCheckCode.getProvider() + " равен " + response1.code();
+           // System.out.println(s);
+            urlForCheckCode.setSendMessage(true);
+            sendMessage(idBogdan, s);
+        }
+    }
+
     public static double average(double average , int amountOfNumbers, double number) {
         return ((double) average*amountOfNumbers + (double) number)/(amountOfNumbers+1);
     }
-
 
 }
