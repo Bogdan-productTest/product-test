@@ -1,7 +1,0 @@
-<suite name="Test" verbose="1">
-    <test name="Test" parallel="methods" thread-count="2">
-        <classes>
-            <class name="Assert.CheckOffersBot.CheckOffers"></class>
-        </classes>
-    </test>
-</suite>
