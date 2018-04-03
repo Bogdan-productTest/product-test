@@ -25,5 +25,22 @@ public class SQLQueries {
         return rs.getString(1);
     }
 
+    public static String getMobiguruIdFromUrl(String id) throws SQLException {
+        ResultSet rs = SQLConnect().executeQuery("SELECT MailId FROM dbo.Products WHERE Url='" + id + "'");
+        rs.next();
+        return rs.getString(1);
+    }
+
+    public static String getIpFromCityName(String city) throws SQLException {
+        ResultSet rs = SQLConnect().executeQuery("SELECT ipStart FROM dbo.Locations WHERE City='" + city + "'");
+        rs.next();
+        return rs.getString(1);
+    }
+
+    public static String getIdFromUrl(String url) throws SQLException {
+        ResultSet rs = SQLConnect().executeQuery("SELECT Id FROM dbo.Products WHERE Url='" + url + "'");
+        rs.next();
+        return rs.getString(1);
+    }
 
 }

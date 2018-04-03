@@ -1,19 +1,13 @@
-package Assert.Rusupermarket;
+package Assert.CheckOffersBot;
 
 import okhttp3.*;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.util.Queue;
 
 import static Assert.MyConfig.getTelegramApiString;
-import static Assert.Rusupermarket.CheckOffers.idBogdan;
+import static Assert.CheckOffersBot.CheckOffers.idBogdan;
 
 public class Methods {
 
